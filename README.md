@@ -21,7 +21,7 @@ O objetivo é comer a comida vermelha e crescer sem bater nas paredes ou em si m
 1. Clone este repositório:
 
    ```bash
-   git clone https://github.com/seuusuario/snake-game-python.git
+   git clone https://github.com/AlefAmaral3/snake-game-python.git
    cd snake-game-python
 
 2. Instale as dependências:
