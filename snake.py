@@ -83,8 +83,19 @@ def game_loop():
         # ---------------------- DESENHA TUDO NA TELA ----------------------
         screen.fill(BLACK)
 
+        # Escolhe cor conforme o score
+        if score < 5:
+            color = (0, 255, 0)        # verde
+        elif score < 10:
+            color = (255, 255, 0)      # amarelo
+        elif score < 20:
+            color = (255, 165, 0)      # laranja
+        else:
+            color = (255, 0, 0)        # vermelho
+
         for segment in snake:
-            pygame.draw.rect(screen, GREEN, (*segment, BLOCK, BLOCK))
+            pygame.draw.rect(screen, color, (*segment, BLOCK, BLOCK))
+
 
         pygame.draw.rect(screen, RED, (*food, BLOCK, BLOCK))
 
@@ -109,7 +120,9 @@ def game_over(score):
         draw_text(f"Sua pontuação: {score}", HEIGHT // 2 + 10)
         draw_text("Pressione qualquer tecla para jogar novamente", HEIGHT - 40)
         pygame.display.flip()
-        clock.tick(15)
+        speed = 10 + (score // 3)
+        clock.tick(speed)
+
 
 # ---------------------- EXECUTA O JOGO ----------------------
 while True:
