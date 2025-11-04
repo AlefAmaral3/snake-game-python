@@ -26,10 +26,10 @@ O objetivo é comer a comida vermelha e crescer sem bater nas paredes ou em si m
 
 2. Instale as dependências:
 
-```bash
-pip install pygame
+   ```bash
+   pip install pygame
 
 3. Execute o Jogo:
-
-```bash
-python snake.py
+   
+   ```bash
+   python snake.py
